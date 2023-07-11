@@ -20,7 +20,7 @@ def remove_custom_emoji(text) -> str:
     Returns:
         str: 絵文字削除後のテキスト
     """
-    pattern = r":[a-zA-z0-9_]+:"
+    pattern = r":[^:]+:"
     return re.sub(pattern, "", text)
 
 
